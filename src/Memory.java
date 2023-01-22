@@ -32,14 +32,6 @@ public class Memory {
         }
     }
 
-    public static void matchCards(int a, int b, int c, int d) {
-        if(arr[a][b] == arr[c][d]) {
-            arr[a][b]=' ';
-            arr[c][d]=' ';
-            System.out.println("Congratulates!!");
-        }
-    }
-
     public static void printBoard() {
         for(int i=0; i<arr.length; i++) {
             for(int j=0; j<arr[i].length; j++){
@@ -61,7 +53,7 @@ public class Memory {
                 if(arr[i][j]==' ')
                     System.out.print("   ");
                 else if(index1==i && index2==j)
-                    System.out.print(arr[i][j]+" ");
+                    System.out.print(arr[i][j]+"  ");
                 else
                     System.out.print("#  ");
             }
@@ -79,12 +71,20 @@ public class Memory {
                 if(arr[i][j]==' ')
                     System.out.print("   ");
                 else if((index1==i && index2==j) || (index3==i && index4==j))
-                    System.out.print(arr[i][j]+" ");
+                    System.out.print(arr[i][j]+"  ");
                 else
                     System.out.print("#  ");
             }
             System.out.println();
         }
         return true;
+    }
+
+    public static void matchCards(int a, int b, int c, int d) {
+        if(arr[a][b] == arr[c][d]) {
+            arr[a][b]=' ';
+            arr[c][d]=' ';
+            System.out.println("\nCongratulates!!");
+        }
     }
 }
