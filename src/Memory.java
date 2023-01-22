@@ -84,7 +84,7 @@ public class Memory {
         if(arr[a][b] == arr[c][d]) {
             arr[a][b]=' ';
             arr[c][d]=' ';
-            System.out.println("\nCongratulates!!");
+            System.out.println("\nYou have matched 2 cards!!");
         }
     }
 
