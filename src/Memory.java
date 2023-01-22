@@ -3,7 +3,6 @@ public class Memory {
     private static final char[][] arr = new char[4][4];
 
     private static boolean notFull() {
-
         for(int i=0; i<arr.length; i++)
             for(int j=0; j<arr[i].length; j++)
                 if((int)(arr[i][j])==0)
@@ -33,18 +32,22 @@ public class Memory {
         }
     }
 
-    public static void exPrint() {
-
-        for(int i=0; i<arr.length; i++) {
-            for (int j = 0; j < arr[i].length; j++)
-                System.out.print(arr[i][j] + "  ");
-            System.out.println();
+    public static void matchCards(int a, int b, int c, int d) {
+        if(arr[a][b] == arr[c][d]) {
+            arr[a][b]=' ';
+            arr[c][d]=' ';
         }
     }
 
-    public static void main(String[] args) {
-        //Demo
-        fillArray();
-        exPrint();
+    public static void printBoard() {
+        for(int i=0; i<arr.length; i++) {
+            for(int j=0; j<arr[i].length; j++){
+                if(arr[i][j]==' ')
+                    System.out.print("   ");
+                else
+                    System.out.print("#  ");
+            }
+            System.out.println();
+        }
     }
 }
