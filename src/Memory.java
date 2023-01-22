@@ -36,6 +36,7 @@ public class Memory {
         if(arr[a][b] == arr[c][d]) {
             arr[a][b]=' ';
             arr[c][d]=' ';
+            System.out.println("Congratulates!!");
         }
     }
 
@@ -49,5 +50,41 @@ public class Memory {
             }
             System.out.println();
         }
+    }
+
+    public static boolean flipFirstCard(int index1, int index2) {
+        if((index1<0) || (index1>3) || (index2<0) || (index2>3) || (arr[index1][index2]==' '))
+            return false;
+
+        for(int i=0; i<arr.length; i++) {
+            for(int j=0; j<arr[i].length; j++){
+                if(arr[i][j]==' ')
+                    System.out.print("   ");
+                else if(index1==i && index2==j)
+                    System.out.print(arr[i][j]+" ");
+                else
+                    System.out.print("#  ");
+            }
+            System.out.println();
+        }
+        return true;
+    }
+
+    public static boolean flipSecondCard(int index1, int index2, int index3, int index4) {
+        if((index3<0) || (index3>3) || (index4<0) || (index4>3) || (arr[index3][index4]==' ') || (index1==index3 && index2==index4))
+            return false;
+
+        for(int i=0; i<arr.length; i++) {
+            for(int j=0; j<arr[i].length; j++){
+                if(arr[i][j]==' ')
+                    System.out.print("   ");
+                else if((index1==i && index2==j) || (index3==i && index4==j))
+                    System.out.print(arr[i][j]+" ");
+                else
+                    System.out.print("#  ");
+            }
+            System.out.println();
+        }
+        return true;
     }
 }
