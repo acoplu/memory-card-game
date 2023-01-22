@@ -11,6 +11,7 @@ public class Memory {
         return false;
     }
 
+    //Method to fill our game board 2D array randomly
     public static void fillArray() {
         int firstIndex, secondIndex, thirdIndex, fourthIndex;
         char randomChar = 65; //ASCII index of 'A'
@@ -32,6 +33,7 @@ public class Memory {
         }
     }
 
+    //Printing the game board in the beginning of game
     public static void printBoard() {
         for(int i=0; i<arr.length; i++) {
             for(int j=0; j<arr[i].length; j++){
@@ -44,6 +46,7 @@ public class Memory {
         }
     }
 
+    //Printing the game board after flipping the first card
     public static boolean flipFirstCard(int index1, int index2) {
         if((index1<0) || (index1>3) || (index2<0) || (index2>3) || (arr[index1][index2]==' '))
             return false;
@@ -62,6 +65,7 @@ public class Memory {
         return true;
     }
 
+    //Printing the game board after flipping the first and second cards
     public static boolean flipSecondCard(int index1, int index2, int index3, int index4) {
         if((index3<0) || (index3>3) || (index4<0) || (index4>3) || (arr[index3][index4]==' ') || (index1==index3 && index2==index4))
             return false;
@@ -80,6 +84,7 @@ public class Memory {
         return true;
     }
 
+    //Remove the matching cards from game board
     public static void matchCards(int a, int b, int c, int d) {
         if(arr[a][b] == arr[c][d]) {
             arr[a][b]=' ';
