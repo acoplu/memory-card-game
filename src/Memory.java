@@ -36,11 +36,13 @@ public class Memory {
     //Printing the game board in the beginning of game
     public static void printBoard() {
         for(int i=0; i<arr.length; i++) {
+            System.out.print("R-"+(i+1)+" →  ");
             for(int j=0; j<arr[i].length; j++){
                 if(arr[i][j]==' ')
                     System.out.print("   ");
                 else
-                    System.out.print("#  ");
+                    System.out.print("▯  ");
+                System.out.print("|  ");
             }
             System.out.println();
         }
@@ -52,13 +54,15 @@ public class Memory {
             return false;
 
         for(int i=0; i<arr.length; i++) {
+            System.out.print("R-"+(i+1)+" →  ");
             for(int j=0; j<arr[i].length; j++){
                 if(arr[i][j]==' ')
                     System.out.print("   ");
                 else if(index1==i && index2==j)
                     System.out.print(arr[i][j]+"  ");
                 else
-                    System.out.print("#  ");
+                    System.out.print("▯  ");
+                System.out.print("|  ");
             }
             System.out.println();
         }
@@ -71,13 +75,15 @@ public class Memory {
             return false;
 
         for(int i=0; i<arr.length; i++) {
+            System.out.print("R-"+(i+1)+" →  ");
             for(int j=0; j<arr[i].length; j++){
                 if(arr[i][j]==' ')
                     System.out.print("   ");
                 else if((index1==i && index2==j) || (index3==i && index4==j))
                     System.out.print(arr[i][j]+"  ");
                 else
-                    System.out.print("#  ");
+                    System.out.print("▯  ");
+                System.out.print("|  ");
             }
             System.out.println();
         }
