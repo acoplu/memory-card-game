@@ -41,8 +41,7 @@ public class Memory {
                 if(arr[i][j]==' ')
                     System.out.print("   ");
                 else
-                    System.out.print("▯  ");
-                System.out.print("|  ");
+                    System.out.print("#  ");
             }
             System.out.println();
         }
@@ -61,8 +60,7 @@ public class Memory {
                 else if(index1==i && index2==j)
                     System.out.print(arr[i][j]+"  ");
                 else
-                    System.out.print("▯  ");
-                System.out.print("|  ");
+                    System.out.print("#  ");
             }
             System.out.println();
         }
@@ -82,8 +80,7 @@ public class Memory {
                 else if((index1==i && index2==j) || (index3==i && index4==j))
                     System.out.print(arr[i][j]+"  ");
                 else
-                    System.out.print("▯  ");
-                System.out.print("|  ");
+                    System.out.print("#  ");
             }
             System.out.println();
         }
